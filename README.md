@@ -5,7 +5,7 @@ in simple PHP application that can be run without any other dependencies besides
 
 ## Usage
 
-0. Make sure you've got docker and [docker-compose](https://docs.docker.com/compose/) install.
+0. Make sure you've got docker and [docker-compose](https://docs.docker.com/compose/) installed.
 
 
         $ docker --version
