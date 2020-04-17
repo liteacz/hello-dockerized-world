@@ -31,3 +31,13 @@ in simple PHP application that can be run without any other dependencies besides
         # so do not worry.
 
 3. That's it! Really... No need for PHP nor Nginx installed on your system. Now head to http://localhost:8000 and see the PHP web page yourself.
+
+4. Do not forget to stop the containers when you're done.
+
+
+        $ docker-compose down
+        Stopping hello-dockerized-world_nginx_1   ... done
+        Stopping hello-dockerized-world_php-fpm_1 ... done
+        Removing hello-dockerized-world_nginx_1   ... done
+        Removing hello-dockerized-world_php-fpm_1 ... done
+        Removing network hello-dockerized-world_default
