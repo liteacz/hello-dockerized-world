@@ -1,7 +1,7 @@
 version: "3"
 services:
     nginx:
-        image: liteacz/nginx:1.19-local
+        image: liteacz/nginx:1.19
         ports:
             - 8000:80
         volumes:
@@ -10,7 +10,7 @@ services:
             - php-fpm
     
     php-fpm:
-        image: liteacz/php:8.0-fpm-local
+        image: liteacz/php:8.0-fpm
         environment:
             FPM_ROOT_DIR: public
         volumes:
