@@ -1,19 +1,17 @@
 version: "3"
 services:
     nginx:
-        image: liteacz/nginx:1.17
-        environment:
-            NGINX_ROOT_DIR: public
+        image: liteacz/nginx:1.19-local
         ports:
             - 8000:80
         volumes:
-            - ./public:/var/www/data/public
+            - ./public:/var/www/public
         depends_on: 
             - php-fpm
     
     php-fpm:
-        image: liteacz/php:7.4-fpm-dev
+        image: liteacz/php:8.0-fpm-local
         environment:
             FPM_ROOT_DIR: public
         volumes:
-            - ./:/var/www/data
+            - .:/var/www

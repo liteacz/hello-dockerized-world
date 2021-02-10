@@ -7,4 +7,6 @@ $realm = new Realm('World!');
 
 $greeting = 'Hello';
 
-echo sprintf('%s dockerized %s!', $greeting, $realm->getName());
+// echo sprintf('%s dockerized %s!', $greeting, $realm->getName());
+
+phpinfo();
