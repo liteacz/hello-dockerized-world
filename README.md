@@ -16,10 +16,10 @@ in simple PHP application that can be run without any other dependencies besides
         # ...and this.
         docker-compose version 1.23.2, build 1110ad01
 
-1. Pull the code
+1. Clone the code
 
 
-        $ git pull git@github.com:liteacz/hello-dockerized-world.git
+        $ git clone git@github.com:liteacz/hello-dockerized-world.git
         $ cd hello-dockerized-world
 
 2. Spin up the containers
