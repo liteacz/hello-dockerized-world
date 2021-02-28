@@ -1,0 +1,1 @@
+FROM liteacz/nginx:1.19

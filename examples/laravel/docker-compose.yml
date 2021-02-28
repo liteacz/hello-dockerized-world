@@ -1,0 +1,23 @@
+version: "3"
+services:
+    nginx:
+        build:
+          context: .
+          dockerfile: ./docker/nginx/Dockerfile
+        ports:
+            - 8000:80
+        volumes:
+            - ./public:/var/www/public
+        depends_on:
+            - php-fpm
+
+    php-fpm:
+        build:
+          context: .
+          dockerfile: ./docker/php-fpm/Dockerfile
+        environment:
+            FPM_ROOT_DIR: public
+            FPM_USER_ID: ${UID:-1000}
+            COMPOSER_AUTO_INSTALL: 1
+        volumes:
+            - .:/var/www
